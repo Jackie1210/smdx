@@ -16,7 +16,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "test": "rollup --config rollup.config.ts --configPlugin typescript"
+    "build": "rimraf dist && rollup --config rollup.config.ts --configPlugin typescript"
   },
   "keywords": ["solid", "mdx", "markdown", "md"],
   "author": "Lynn",
