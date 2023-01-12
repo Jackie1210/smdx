@@ -1,0 +1,24 @@
+{
+  "name": "smdx",
+  "version": "1.0.0",
+  "description": "mdx for solid",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "test": "rollup --config rollup.config.ts --configPlugin typescript"
+  },
+  "keywords": ["solid", "mdx", "markdown", "md"],
+  "author": "Lynn",
+  "license": "MIT"
+}

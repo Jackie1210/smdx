@@ -1,4 +1,3 @@
-//@ts-check
 import path from 'path'
 import fs from 'fs'
 import { fileURLToPath } from 'url'
@@ -13,11 +12,7 @@ import esbuild from 'rollup-plugin-esbuild'
 const pkg = JSON.parse(fs.readFileSync(new URL('./package.json', import.meta.url), 'utf8'))
 const __dirname = path.join(fileURLToPath(import.meta.url), '..')
 
-/**
- * @param {string} p
- * @returns
- */
-const resolve = (p) => path.resolve(__dirname, p)
+const resolve = (p: string) => path.resolve(__dirname, p)
 const name = 'index'
 
 export default defineConfig([

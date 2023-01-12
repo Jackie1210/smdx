@@ -6,17 +6,7 @@
   "files": [
     "dist"
   ],
-  "author": "Lynn<https://github.com/Jackie1210>",
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "types": "./dist/index.d.ts",
+  "author": "Lynn",
   "simple-git-hooks": {
     "pre-commit": "pnpm exec lint-staged",
     "commit-msg": "tsx scripts/verifyCommit.ts"
@@ -26,13 +16,12 @@
   },
   "lint-staged": {
     "src/**/*.ts": [
-      "eslint --fix"
+      "eslint --cache --fix"
     ]
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "rollup -wc",
-    "build": "rimraf dist && rollup -c",
+    "postinstall": "simple-git-hooks",
     "coverage": "vitest run --coverage",
     "test": "vitest",
     "test:CI": "vitest --no-threads"

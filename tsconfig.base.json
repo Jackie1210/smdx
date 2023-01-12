@@ -12,9 +12,5 @@
     "resolveJsonModule": true,
     "types": ["vitest/globals"],
     "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  },
-  "include": ["src/**/*.ts", "tests/**/*.spec.ts"]
+  }
 }
