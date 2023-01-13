@@ -1,16 +1,21 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "esnext",
+    "module": "ESNext",
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
     "noUnusedLocals": true,
-    "noImplicitAny": true,
     "allowJs": true,
     "resolveJsonModule": true,
     "types": ["vitest/globals"],
     "baseUrl": ".",
-  }
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "paths": {
+      "smdx": ["./packages/smdx/src/index.ts"]
+    },
+  },
+  "include": ["tests/**/*.spec.ts", "tests/**/*.spec.tsx"]
 }

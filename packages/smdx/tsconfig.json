@@ -1,11 +1,18 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../tsconfig.json",
   "include": [
-    "./rollup.config.ts"
+    "rollup.config.ts",
+    "tests/*.test.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "compilerOptions": {
+    "baseUrl": ".",
     "esModuleInterop": true,
     "declaration": false,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["mdx"]
   }
 }

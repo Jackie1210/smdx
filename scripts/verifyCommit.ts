@@ -3,6 +3,8 @@
 import color from 'picocolors'
 import { readFileSync } from 'fs'
 import path from 'path'
+import { fileURLToPath } from 'url'
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const msgPath = path.resolve(__dirname, '../.git/COMMIT_EDITMSG')
 const msg = readFileSync(msgPath, 'utf-8').trim()
 

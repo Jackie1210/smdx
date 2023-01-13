@@ -2,6 +2,7 @@
   "name": "smdx",
   "version": "1.0.0",
   "description": "mdx for solid",
+  "type": "module",
   "main": "dist/index.mjs",
   "module": "dist/index.mjs",
   "exports": {
@@ -18,7 +19,15 @@
   "scripts": {
     "build": "rimraf dist && rollup --config rollup.config.ts --configPlugin typescript"
   },
-  "keywords": ["solid", "mdx", "markdown", "md"],
+  "keywords": [
+    "solid",
+    "mdx",
+    "markdown",
+    "md"
+  ],
   "author": "Lynn",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/mdx": "^2.0.3"
+  }
 }
